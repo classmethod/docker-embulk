@@ -1,6 +1,6 @@
 FROM openjdk:8-alpine
 
-ENV EMBULK_VERSION 0.8.17
+ENV EMBULK_VERSION 0.9.7
 
 RUN apk --update add --virtual build-dependencies \
     curl \
