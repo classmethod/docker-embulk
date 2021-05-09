@@ -1,8 +1,9 @@
 #!/bin/sh
 
-# Install Embulk Plug ins
-if [ -n "$PLUGINS" ] ; then
-  /embulk/embulk gem install $PLUGINS
+# Install Embulk Plugins
+# You can embed this step to Dockerfile if you need quick run
+if [ -e "/embulk/Gemfile" ] ; then
+  /embulk/embulk bundle install
 fi
 
 /embulk/embulk "$@"
